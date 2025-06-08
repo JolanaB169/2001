@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game Over</title>
+</head>
+<body>
+<h1>Game Over!</h1>
+<p>The winner is: <strong>{{ winner }}</strong></p>
+<p>Final scores:</p>
+<ul>
+    <li>Player: {{ p_score }}</li>
+    <li>Computer: {{ c_score }}</li>
+</ul>
+<a href="{{ url_for('start') }}">Play again</a>
+</body>
+</html>

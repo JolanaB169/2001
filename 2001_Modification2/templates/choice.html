@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Choose Your Dice</title>
+</head>
+<body>
+<h1>Choose 2 dice</h1>
+<form method="POST">
+    <label for="die1">First die:</label>
+    <select name="die1" id="die1" required>
+        {% for die in dice %}
+        <option value="{{ die }}">{{ die }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="die2">Second die:</label>
+    <select name="die2" id="die2" required>
+        {% for die in dice %}
+        <option value="{{ die }}">{{ die }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <button type="submit">Play!</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game 2001 - Play</title>
+</head>
+<body>
+<h1>Turn {{ turn }}</h1>
+
+<p><strong>Player's dice:</strong> {{ p_die1 }}, {{ p_die2 }}</p>
+<p><strong>Computer's dice:</strong> {{ c_die1 }}, {{ c_die2 }}</p>
+
+<p>Player rolled: {{ roll_p }}</p>
+<p>Computer rolled: {{ roll_c }}</p>
+
+<p>Player score: {{ p_score }}</p>
+<p>Computer score: {{ c_score }}</p>
+
+<form method="POST" action="{{ url_for('play') }}">
+    <!-- Skrytá pole s aktuálním stavem -->
+    <input type="hidden" name="p_die1" value="{{ p_die1 }}">
+    <input type="hidden" name="p_die2" value="{{ p_die2 }}">
+    <input type="hidden" name="c_die1" value="{{ c_die1 }}">
+    <input type="hidden" name="c_die2" value="{{ c_die2 }}">
+    <input type="hidden" name="p_score" value="{{ p_score }}">
+    <input type="hidden" name="c_score" value="{{ c_score }}">
+    <input type="hidden" name="turn" value="{{ turn }}">
+    <button type="submit">Roll dice</button>
+</form>
+
+</body>
+</html>
